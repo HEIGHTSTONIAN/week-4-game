@@ -1,0 +1,88 @@
+
+body {
+   background-color: 
+}
+
+.headerpanel {
+    min-width: 220px;
+    width: 230px;
+    background-color: #D4AF37;
+    height: 70px;
+    box-shadow:0px 0px 5px 5px #C9C9C9;
+    -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+    -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+    margin: 10px;
+    padding: 13px;
+    color: #FFF0F5;
+    font-size: 30px;
+    font-weight: bold;
+ }
+
+
+ #CrystalsCollector {
+    padding-top: 40px;
+ }
+
+.playrules {
+    min-width: 400px;
+    width: 400px;
+    background-color: #00B227;
+    height: 230px;
+    box-shadow:0px 0px 5px 5px #C9C9C9;
+    -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+    -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+    margin: 10px;
+    padding: 10px;
+    color:  #E0FFFF;
+ }
+
+
+.panel {
+    display: inline-block;
+    background: #ffffff;
+    min-height: 100px;
+    height: 100px;
+    box-shadow:0px 0px 5px 5px #C9C9C9;
+    -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+    -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+    margin: 10px;
+    padding: 10px;
+    color: #D8BFD8;
+    overflow: hidden;
+}
+
+.panel1 {
+    min-width: 100px;
+    width: 100px;
+    background-color: #996666;
+    color: #F7E7CE;
+    overflow: hidden;
+}
+
+.panel2 {
+    min-width: 245px;
+    width: 245px;
+    background-color: #3C00C5
+}
+.boxscore {
+    display: inline-block;
+    background: #7B68EE;
+    color: #E6E2FF;
+    min-height: 20px;
+    height: 20px;
+    box-shadow:0px 0px 5px 5px #C9C9C9;
+    -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+    -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+    margin: 10px;
+    padding: 10px;
+    width: 245px;
+}
+
+.crystalrow {
+    margin: 15px 0 0 9px;
+}
+
+img {
+    height: 70px;
+    width: 65px;
+}

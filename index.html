@@ -1,0 +1,141 @@
+<!--PSEUDOCODE for CrystalsCollector!
+THE PURPOSE OF THE GAME IS TO WIN OR LOSE BASED ON TOTALS DETERMINED BY ASSIGNED CRYTAL VALUES CLICKED.
+
+`post page with header and rules of the game for user.
+
+`header with title of game
+
+`<p>'s of rules to be displayed alone
+
+RANDOMLY POSTED NUMBER TO MATCH IS BETWEEN 19-120.
+`panel1 displays random number generated at the start of each game. 
+
+`class="crystalrow" loads pictures of crystals left to right, 
+
+`4 CRYSTALS EACH HAVE A HIDDEN RANDOM VALUE AT THE START OF EACH GAME. CLICKING ON A CRYSTAL WILL ADD POINTS INSIDE PANEL2
+crystal1 generates random values between 1-12, when clicked. crystal1 also passes that value to panel2 each time it's clicked. 
+crystal2 generates random values between 1-12, when clicked. crystal2 also passes that value to panel2 each time it's clicked. 
+crystal3 generates random values between 1-12, when clicked. crystal3 also passes that value to panel2 each time it's clicked. 
+crystal4 generates random values between 1-12, when clicked. crystal4 also passes that value to panel2 each time it's clicked.
+each to begin a new value once the loss++1 or win++1 is added.
+
+`include a <div> with <p> in a row that displays "Your score is: " that stands alone over panel2. 
+
+MATCH THE RANDOM NUMBER WHEN CRYSTAL PHOTOS ARE CLICKED.
+`panel2 is passed the assigned random value of each clicked crystal, whether it's "crytals1" "crystal2" "crystal3" or "crystal4" .onkeyup. 
+
+`panel2 is to stop taking passes from class="crystalrow" when it is => than the random number in panel1.
+
+`panel2 is to stop taking passes after it stops being <= random number in panel1.
+
+`panel2 ++1 to "w" (w) if it's == to random number in panel1, Equally, if panel2 number is == panel1, then ++1 to "Wins: (w)"
+
+`panel2 ++1 to "l" (l) if it's generated number is > than random number in panel1. Equally, if panel2 number is > panel 1, then ++1 to "Losses: (l)"
+
+`panel2 also starts over after ++1 passed "l" is made.
+
+`panel3 in row3 posts "You win!" if "Wins: (w)" is increased by ++1
+`panel3 in row3 posts "You lost!" if "Losses: (l)" is increased by ++1
+
+`panel3 also adds to each "Win: (x)" by ++1 if the number of wins is increased. 
+`panel3 also adds to each "Losses: (l)" by ++1 if the number of wins is increased.
+
+
+WHEN CRYSTAL PHOTOS ARE CLICKED
+
+ MATCH THE RANDOM NUMBER to each crystal, then, add and display number to panel2 
+1. if number in panel2 > random number in panel1
+  ++1 to looses, show "You lost!" if "Losses: (l)" in panel3
+2. if number in panel2 = random number in panel1
+  ++1 to wins , show "You win!" if "Wins: (w)" in panel3
+ //
+
+new notes when crystal photos are clicked panel2 is passed the assigned random value of each clicked crystal , using .on() method - this is the .on("click", function(){}); which we study in class
+because .onkeyup is triggered when we release a key in keyboard
+we only click the mouse in this game. Thu,s we use .on("click"....
+//
+MATCH THE RANDOM NUMBER WHEN CRYSTAL PHOTOS ARE CLICKED.
+panel2 is passed the assigned random value of each clicked crystal, whether it's "crytals1" "crystal2" "crystal3" or "crystal4"
+1. if number in panel2 > random number in panel1
+    ++1 to looses, show "You lost!" if "Losses: (l)" in panel3
+    reset()
+2. if number in panel2 = random number in panel1
+    ++1 to wins , show "You win!" if "Wins: (w)" in panel3
+    reset()
+
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <title>CrystalsCollector!</title>
+</head>
+
+<body>
+	<br>
+	<br>
+    <div class="container">
+    <div id="CrystalsCollector" class="headerpanel">CrystalCollector!
+    </div>
+    <br>
+
+    <div id="howtoplay" class="playrules">
+    	<p>You will be given a random number at the start of the game.<br>
+    	<br>
+    	<p>
+    	There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.<br>
+		<br>
+		</p>
+		<p>You will win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.<br>
+		<br>
+		</p>
+		<p>The value of each crystal is hidden from you until your click on it.<br>
+		<br>
+		</p>
+		<p>Each time when the game starts, the game will change the values of each crystal.<br>
+		<br>
+		</p>
+
+	</div>
+		<br>
+
+		<div id="randomnumber" class="panel panel1"><p><span><output>Random Number: </output></span></p><br><br>  </div>			
+		<div class="panel panel1">
+		<br>
+		<p><span>Wins & Losses</span></p>
+		<br><p><span id="wins">Wins: </span></p>	
+		<br>
+		<p><span id="losses">Losses: </span></p>
+		<br>
+		</div>
+			
+		<div class="crystalrow">
+		<img id="crystal1" class="crystal" src="assets/images/crystal1.jpg">
+  		<img id="crystal2" class="crystal" src="assets/images/crystal2.jpg">
+		<img id="crystal3" class="crystal" src="assets/images/crystal3.jpg">
+  		<img id="crystal4" class="crystal" src="assets/images/crystal4.jpg">
+  		</div>
+  		<br>
+  		<div class="boxscore">Your total score is: </div>
+  		<br>
+    	<div class="panel panel2"><p><span><output id="usertotal">0</output></span></p>
+    	<br>
+    	<br>
+    	<br>
+    	<br>
+		<button id="start">Start Again</button>
+    	</div>
+		<br>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
+
+
